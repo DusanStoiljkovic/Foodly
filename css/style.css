@@ -330,3 +330,65 @@
 .link:active {
     border-bottom: none;
 }
+
+/**************************/
+/* SECTION TESTIMONIAL AND GALLERY*/
+/**************************/
+.section-testimonials {
+    grid-template-columns: 55fr 45fr !important;
+    gap: 0 !important;
+    background-color: #fdf2e9;
+    align-items: center;
+}
+
+.testimonial-container {
+    padding: 9.6rem;
+}
+
+.testimonials {
+    row-gap: 4.8rem !important;
+    column-gap: 8rem !important;
+}
+
+.testimonial {
+
+}
+
+.testimonial-img {
+    height: 25%;
+    border-radius: 50%;
+    border: 1px solid #cf711f;
+    margin-bottom: 1.2rem;
+
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-author {
+    font-size: 1.6rem;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.gallery {
+    gap: 1.5rem !important;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
