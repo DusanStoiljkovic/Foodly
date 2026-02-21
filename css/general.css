@@ -143,6 +143,19 @@ body {
     box-shadow: inset 0 0 0 3px #fff;
 }
 
+.btn--form {
+    background-color: #45260a;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    align-self: end;
+    padding: 1.2rem;
+    font-family: inherit;
+}
+
 .margin-right-sm {
     margin-right: 1.6rem !important;
 }
@@ -175,8 +188,16 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
     align-items: center;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
 }
 
 .list {
@@ -192,4 +213,36 @@ body {
     align-items: center;
     gap: 1.6rem;
     line-height: 1.2;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    background-color: #fdf2e9;
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: #cf711f;
+}
+
+.feature-title {
+    font-size: 2.4em;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #333;
+}
+
+.feature-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem #cf711f6d;
 }
