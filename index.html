@@ -53,8 +53,8 @@
                         Tailored to your personal tastes and nutritional needs. 
                         
                     </p>
-                    <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-                    <a href="#" class="btn btn--outline">Learn more &darr;</a>
+                    <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+                    <a href="#howItWorks" class="btn btn--outline">Learn more &darr;</a>
                     <div class="delivered-meals">
                         <div class="delivered-imgs">
                             <img src="img/customers/customer-1.jpg" alt="Customer photo"/>
@@ -556,7 +556,7 @@
             </div>
         </section>
 
-        <section class="section-cta">
+        <section id="cta" class="section-cta">
             <div class="container">
                 <div class="cta">
                     <div class="cta-text-box">
@@ -694,6 +694,31 @@
         openButton.style.display = "block"
         closeButton.style.display = "none"
     })
+
+    // sticky navigation
+    const sectionHeroEl = document.querySelector(".section-hero")
+
+    const ob = new IntersectionObserver(
+        function (entries) {
+            const ent = entries[0]
+            console.log(ent)
+
+            if(ent.isIntersecting === false) {
+                document.body.classList.add("sticky")
+            }
+
+            if(ent.isIntersecting === true) {
+                document.body.classList.remove("sticky")
+            }
+        }, {
+            root: null,
+            threshold: 0,
+            rootMargin: "-80px 0px 0px 0px"
+        }
+    )
+    ob.observe(sectionHeroEl)
+
+    
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
