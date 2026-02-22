@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/queries.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,13 @@
                     <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
                 </ul>
             </nav>
+
+            <button class="btn-mobile-nav">
+                <ion-icon id="open" class="icon-mobile-nav" 
+                name="menu-outline"></ion-icon>
+                <ion-icon id="close" class="icon-mobile-nav" 
+                name="close-outline"></ion-icon>
+            </button>
     </header>
 
     <main>
@@ -224,7 +232,7 @@
                     <div class="meal-description">
                         <span class="meal-tag light-green">Vegan</span>
                         <span class="meal-tag yellow">Paleo</span>
-                        <p class="meal-title">Japanese Gyozas</p>
+                        <p class="meal-title">Avocado salad</p>
                         <ul class="meal-attributes">
                             <li class="meal-attribute">
                                 <ion-icon class="check-icon" name="flame-outline"></ion-icon>       
@@ -669,6 +677,24 @@
         </div>
     </footer>
 
+
+<script>
+    const openButton = document.querySelector("#open")
+    const closeButton = document.querySelector("#close")
+    const header = document.querySelector(".header")
+
+   openButton.addEventListener('click', function () {
+        header.classList.add('nav-open')
+        openButton.style.display = "none"
+        closeButton.style.display = "block"
+    })
+
+    document.querySelector("#close").addEventListener("click", function () {
+        header.classList.remove('nav-open')
+        openButton.style.display = "block"
+        closeButton.style.display = "none"
+    })
+</script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
