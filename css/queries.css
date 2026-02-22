@@ -299,6 +299,10 @@ rem and em do NOT depend on html font-size in media queries!
 /****************************/
 
 @media( max-width: 31rem) {
+    .hero-img {
+        width: 100%;
+    }
+    
     .featured-logo {
         height: 1rem;
     }
